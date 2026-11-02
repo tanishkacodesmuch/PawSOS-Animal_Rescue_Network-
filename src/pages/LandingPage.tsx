@@ -16,7 +16,9 @@ import {
   Award,
 } from 'lucide-react';
 
-const HERO_PHOTO = '/src/assets/images/hero_animal_rescue_1793530756080.jpg';
+import heroImage from '../assets/images/hero_animal_rescue_1793530756080.jpg';
+
+const HERO_PHOTO = heroImage;
 
 export const LandingPage: React.FC = () => {
   const { navigateTo, cases, analytics } = useRescue();
