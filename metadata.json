@@ -1,0 +1,10 @@
+{
+  "name": "Animal Emergency & Rescue Network",
+  "description": "Centralized, GPS-enabled digital emergency response platform connecting citizens with verified animal rescuers, veterinary clinics, NGOs, and shelters.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

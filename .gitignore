@@ -1,0 +1,28 @@
+
+node_modules/
+build/
+dist/
+coverage/
+
+.DS_Store
+*.log
+
+# Environment variables
+.env*
+!.env.example
+
+# Local database and user records
+.data/
+*.db
+*.sqlite3
+
+# Python backend
+backend/.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# IDE and temporary files
+.vscode/
+*.tmp
