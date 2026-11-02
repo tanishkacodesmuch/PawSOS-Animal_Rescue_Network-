@@ -15,6 +15,13 @@ if (!JWT_SECRET || JWT_SECRET.length < 32) {
 // Middleware for parsing JSON and large payloads for photo uploads
 app.use(express.json({ limit: '25mb' }));
 app.use(express.urlencoded({ extended: true, limit: '25mb' }));
+// Disable test-account endpoints on the public website
+app.use('/api/test', (req, res, next) => {
+  if (process.env.NODE_ENV === 'production') {
+    return res.status(404).json({ error: 'Not available' });
+  }
+  next();
+});
 
 // Health check endpoint for Cloud Run and monitoring
 app.get(['/health', '/api/health'], (_req, res) => {
